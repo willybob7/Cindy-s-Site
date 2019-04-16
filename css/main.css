@@ -100,42 +100,90 @@ textarea {
    ========================================================================== */
 
 body {
-  background-image: url("../img/quiltfull.jpg");
+  /* background-image: url("../img/quiltfull.jpg"); */
   background-size: 100%;
+}
+/* body::after{
+   content: "";
+  background: url("../img/creative-pattern-material-sewing-quilt-textile-552713-pxhere.com.jpg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+} */
+
+#background {
+  position: fixed;
+  opacity: 0.8;
+  z-index: -300;
+  height: 100%;
+  min-width: 100%;
 }
 
 .container {
-  background: rgba(128, 128, 128, 0.6);
-  margin: 20px;
+  background: rgba(7, 21, 145, 0.5);
+  /* margin: 20px; */
   height: 100%;
 }
 
 .logoDiv {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
 
 .logo {
-  height: 500px;
-  margin-top: -80px;
+  height: 582px;
+    margin: -84px 0px -132px 19px;
 }
 
 #cindyFromIndyPic {
-  height: 100px;
-  position: absolute;
-  top: 210px;
-  left: 53%;
-  border-radius: 50%;
+  height: 193px;
+    position: absolute;
+    top: 134px;
+    left: 39%;
+    border-radius: 50%;
+    border: dashed 5px rgb(0, 51, 153);
 }
 
 #cindyFromIndy {
-  font-size: 38px;
-  position: absolute;
-  top: 130px;
-  left: 53%;
-  font-family: Indie Flower;
+    color: navajowhite;
+    font-size: 71px;
+    position: absolute;
+    top: -26px;
+    left: 37%;
+    font-family: Indie Flower;
 }
 
+.nav {
+  text-align: center;
+    background-color: rgba(0, 51, 153, 0.7);
+
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+nav li {
+  display: inline-block;
+  margin: 4px 2%;
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+}
+
+nav a {
+  font-family: Indie Flower;
+  text-decoration: none;
+  /* color: #000; */
+  color: navajowhite;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
