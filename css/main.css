@@ -100,67 +100,58 @@ textarea {
    ========================================================================== */
 
 body {
-  /* background-image: url("../img/quiltfull.jpg"); */
-  background-size: 100%;
+  height: 100%;
 }
-/* body::after{
-   content: "";
-  background: url("../img/creative-pattern-material-sewing-quilt-textile-552713-pxhere.com.jpg");
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-} */
 
 #background {
   position: fixed;
   opacity: 0.8;
-  z-index: -300;
+  z-index: -1;
   height: 100%;
+  min-height: 100%;
   min-width: 100%;
 }
 
 .container {
   background: rgba(7, 21, 145, 0.5);
-  /* margin: 20px; */
   height: 100%;
 }
 
 .logoDiv {
-  /* display: flex; */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .logo {
   height: 582px;
-    margin: -84px 0px -132px 19px;
-}
-
-#cindyFromIndyPic {
-  height: 193px;
-    position: absolute;
-    top: 134px;
-    left: 39%;
-    border-radius: 50%;
-    border: dashed 5px rgb(0, 51, 153);
+  margin: -84px 0px -132px 19px;
 }
 
 #cindyFromIndy {
-    color: navajowhite;
-    font-size: 71px;
-    position: absolute;
-    top: -26px;
-    left: 37%;
-    font-family: Indie Flower;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  color: navajowhite;
+  margin: 117px 0px 3px -17px;
+  font-family: Indie Flower;
+}
+
+#cindyFromIndy h1 {
+  font-size: 55px;
+  margin: -48px 0px 17px 9px;
+}
+
+#cindyFromIndyPic {
+  height: 117px;
+  margin: -48px 0px 4px -12px;
+  border-radius: 50%;
+  border: dashed 5px rgb(0, 51, 153);
 }
 
 .nav {
   text-align: center;
-    background-color: rgba(0, 51, 153, 0.7);
-
+  background-color: rgba(0, 51, 153, 0.7);
 }
 
 nav ul {
@@ -168,7 +159,6 @@ nav ul {
   padding: 0;
   list-style: none;
 }
-
 
 nav li {
   display: inline-block;
@@ -181,8 +171,50 @@ nav li {
 nav a {
   font-family: Indie Flower;
   text-decoration: none;
-  /* color: #000; */
   color: navajowhite;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    height: 400px;
+    margin: -68px 0px -80px 11px;
+  }
+  #cindyFromIndy h1 {
+    font-size: 38px;
+    margin: -74px 0px 17px 9px;
+  }
+  #cindyFromIndyPic {
+    height: 100px;
+    margin: -25px 0px 0px 14px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .logo {
+    height: 300px;
+    margin: -47px 0px -25px 0px;
+  }
+  #cindyFromIndyPic {
+    margin: -63px 0px 0px -7px;
+  }
+  #cindyFromIndy h1 {
+    font-size: 32px;
+    margin: -94px 0px 17px 9px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .logo {
+    height: 235px;
+    margin: -30px -169px -84px -81px;
+  }
+  #cindyFromIndy h1 {
+    font-size: 24px;
+    margin: -107px 181px 53px;
+  }
+  #cindyFromIndyPic {
+    height: 70px;
+    margin: -54px 156px 13px;
+  }
 }
 /* ==========================================================================
    Helper classes
