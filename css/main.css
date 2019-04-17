@@ -115,6 +115,9 @@ body {
 .container {
   background: rgba(7, 21, 145, 0.5);
   height: 100%;
+  border-radius: 20px;
+  margin: 0px 3px 3px 3px;
+  border: dashed 3px rgb(0, 51, 153);
 }
 
 .logoDiv {
@@ -124,8 +127,8 @@ body {
 }
 
 .logo {
-  height: 582px;
-  margin: -84px 0px -132px 19px;
+  height: 363px;
+  margin: 6px 11px 6px 0px;
 }
 
 #cindyFromIndy {
@@ -139,12 +142,12 @@ body {
 
 #cindyFromIndy h1 {
   font-size: 55px;
-  margin: -48px 0px 17px 9px;
+  margin:-48px 0px 17px 23px;
 }
 
 #cindyFromIndyPic {
   height: 117px;
-  margin: -48px 0px 4px -12px;
+  margin: -48px 0px 4px -1px;
   border-radius: 50%;
   border: dashed 5px rgb(0, 51, 153);
 }
@@ -152,11 +155,14 @@ body {
 .nav {
   text-align: center;
   background-color: rgba(0, 51, 153, 0.7);
+  border-radius: 20px;
+  border: dashed 3px rgb(0, 51, 153);
+
 }
 
 nav ul {
-  margin: 0;
-  padding: 0;
+  margin: 5px 5px 0px 5px;
+  padding: 0 0 7px 0;
   list-style: none;
 }
 
@@ -169,15 +175,24 @@ nav li {
 }
 
 nav a {
+  border: 0px dashed navajowhite;
+  border-radius: 25%;
   font-family: Indie Flower;
+  font-size: 30px;
   text-decoration: none;
   color: navajowhite;
+  position: relative;
+  transition: all ease-in-out 250ms;
+  padding: 3px;
+}
+
+nav a:hover {
+    border: 3px dashed navajowhite;
 }
 
 @media only screen and (max-width: 600px) {
   .logo {
-    height: 400px;
-    margin: -68px 0px -80px 11px;
+    height: 223px;
   }
   #cindyFromIndy h1 {
     font-size: 38px;
@@ -191,21 +206,27 @@ nav a {
 
 @media only screen and (max-width: 460px) {
   .logo {
-    height: 300px;
-    margin: -47px 0px -25px 0px;
+    height: 165px;
   }
   #cindyFromIndyPic {
-    margin: -63px 0px 0px -7px;
+    height: 90px;
+    margin: -62px 39px 1px 11px;
   }
   #cindyFromIndy h1 {
-    font-size: 32px;
-    margin: -94px 0px 17px 9px;
+    font-size: 27px;
+    margin: -103px 0px 11px 19px;
+  }
+  nav ul {
+    padding: 0;
+  }
+  nav li {
+    display: block;
   }
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 382px) {
   .logo {
-    height: 235px;
-    margin: -30px -169px -84px -81px;
+    height: 180px;
+    margin: 2px -154px 6px -71px;
   }
   #cindyFromIndy h1 {
     font-size: 24px;
