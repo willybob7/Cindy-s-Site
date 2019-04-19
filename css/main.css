@@ -98,19 +98,16 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-html{
-  /* put the quilt in the background here */
-  background-image: 
-
+* {
+  box-sizing: border-box;
 }
 
 body {
-  /* put the bench in the background here */
+  background-size: cover;
+  height: 100%;
+  background-position: right;
   background-repeat: no-repeat;
-  background-image: url(../img/jpegmini_optimized/IMG_0452.jpg) ,url(../img/jpegmini_optimized/IMG_0478.jpg)
-  /* back */
+  background-image: url(../img/jpegmini_optimized/IMG_0452.jpg);
 }
 
 /* #background {
@@ -124,7 +121,6 @@ body {
 
 .container {
   background: rgba(7, 21, 145, 0.5);
-  height: 100%;
   border-radius: 20px;
   margin: 0px 3px 3px 3px;
   border: dashed 3px rgb(0, 51, 153);
@@ -137,7 +133,7 @@ body {
 }
 
 .logo {
-  height: 363px;
+  height: 223px;
   margin: 6px 11px 6px 0px;
 }
 
@@ -151,13 +147,13 @@ body {
 }
 
 #cindyFromIndy h1 {
-  font-size: 55px;
-  margin:-48px 0px 17px 23px;
+  font-size: 38px;
+  margin: -74px 0px 17px 9px;
 }
 
 #cindyFromIndyPic {
-  height: 117px;
-  margin: -48px 0px 4px -1px;
+  height: 100px;
+  margin: -25px 0px 0px 14px;
   border-radius: 50%;
   border: dashed 5px rgb(0, 51, 153);
 }
@@ -167,7 +163,6 @@ body {
   background-color: rgba(0, 51, 153, 0.7);
   border-radius: 20px;
   border: dashed 3px rgb(0, 51, 153);
-
 }
 
 nav ul {
@@ -197,21 +192,53 @@ nav a {
 }
 
 nav a:hover {
-    border: 3px dashed navajowhite;
+  border: 3px dashed navajowhite;
 }
 
-@media only screen and (max-width: 600px) {
-  .logo {
-    height: 223px;
-  }
-  #cindyFromIndy h1 {
-    font-size: 38px;
-    margin: -74px 0px 17px 9px;
-  }
-  #cindyFromIndyPic {
-    height: 100px;
-    margin: -25px 0px 0px 14px;
-  }
+.mySlides {
+  /* display: none; */
+}
+.mySlides img {
+  max-width: 100%;
+  max-height: 400px;
+  vertical-align: middle;
+  border: 3px dashed navajowhite;
+  border-radius: 25px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
 }
 
 @media only screen and (max-width: 460px) {
@@ -233,7 +260,7 @@ nav a:hover {
     display: block;
   }
 }
-@media only screen and (max-width: 382px) {
+@media only screen and (max-width: 400px) {
   .logo {
     height: 180px;
     margin: 2px -154px 6px -71px;
