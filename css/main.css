@@ -99,18 +99,28 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-body {
-  height: 100%;
+
+html{
+  /* put the quilt in the background here */
+  background-image: 
+
 }
 
-#background {
+body {
+  /* put the bench in the background here */
+  background-repeat: no-repeat;
+  background-image: url(../img/jpegmini_optimized/IMG_0452.jpg) ,url(../img/jpegmini_optimized/IMG_0478.jpg)
+  /* back */
+}
+
+/* #background {
   position: fixed;
   opacity: 0.8;
   z-index: -1;
   height: 100%;
   min-height: 100%;
   min-width: 100%;
-}
+} */
 
 .container {
   background: rgba(7, 21, 145, 0.5);
