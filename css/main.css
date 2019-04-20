@@ -28,11 +28,6 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -99,19 +94,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   background-position: right;
   background-repeat: no-repeat;
   background-image: url(../img/jpegmini_optimized/IMG_0452.jpg);
 }
 
 /* #background {
-  position: fixed;
+  position: fixed;s
   opacity: 0.8;
   z-index: -1;
   height: 100%;
@@ -127,8 +123,13 @@ body {
 }
 
 .logoDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -139,7 +140,10 @@ body {
 
 #cindyFromIndy {
   width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   color: navajowhite;
   margin: 117px 0px 3px -17px;
@@ -158,9 +162,22 @@ body {
   border: dashed 5px rgb(0, 51, 153);
 }
 
-.nav {
+nav {
+  position: absolute;
   text-align: center;
+  top: 38%;
+  right: 3px;
   background-color: rgba(0, 51, 153, 0.7);
+  /* border-radius: 20px;
+  border: dashed 3px rgb(0, 51, 153); */
+  width: 300px;
+  height: 0px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.site-nav--open {
+  height: auto;
   border-radius: 20px;
   border: dashed 3px rgb(0, 51, 153);
 }
@@ -172,27 +189,84 @@ nav ul {
 }
 
 nav li {
-  display: inline-block;
-  margin: 4px 2%;
-  padding-top: 10px;
+  margin: 0px 2%;
+  padding: 3px 0 3px 0;
   position: relative;
   text-align: center;
+  border-bottom: dashed navajowhite 1px;
+}
+
+nav li:last-child {
+  border-bottom: none;
 }
 
 nav a {
+  display: block;
   border: 0px dashed navajowhite;
   border-radius: 25%;
   font-family: Indie Flower;
-  font-size: 30px;
+  font-size: 20px;
   text-decoration: none;
   color: navajowhite;
   position: relative;
+  -webkit-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms;
-  padding: 3px;
+  margin: 3px;
 }
 
 nav a:hover {
-  border: 3px dashed navajowhite;
+  padding: 2px;
+  background: navajowhite;
+  color: rgb(0, 51, 153);
+  font-size: 23px;
+  font-weight: bold;
+  /* line-height: 1.3em; */
+  border: 2px dashed rgb(0, 51, 153);
+  border-radius: 10px;
+  box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+}
+
+nav a:hover nav li {
+  padding: 0;
+}
+
+.menu-toggle {
+  padding: 1em;
+  /* background: black; */
+  position: absolute;
+  top: 200px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: navajowhite;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+.hamburger::before {
+  transform: translateY(-6px);
+}
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
 }
 
 .mySlides {
@@ -208,37 +282,73 @@ nav a:hover {
 
 /* Slideshow container */
 .slideshow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+@media only screen and (min-width: 560px) {
+  .menu-toggle {
+    display: none;
+  }
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+    width: 100%;
+    /* text-align: center; */
+    position: relative;
+    height: 70px;
+    border-radius: 20px;
+    border: dashed 3px rgb(0, 51, 153);
+    padding: 0;
+    top: 0%;
+    right: 0px;
+  }
+  nav ul {
+    margin: 0;
+    width: 100%;
+  }
+  nav a {
+    padding-top: 3px;
+  }
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+@media only screen and (min-width: 1000px) {
+  nav {
+    position: absolute;
+    left: 3%;
+    top: 243px;
+    width: 200px;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  nav a {
+    font-size: 40px;
+  }
+  nav a:hover {
+    font-size: 43px;
+  }
+  .site-nav li {
+    display: block;
+    border: none;
+  }
 }
-
-.active {
-  background-color: #717171;
+@media only screen and (max-width: 560px) {
+  body {
+    overflow: hidden;
+  }
 }
 
 @media only screen and (max-width: 460px) {
@@ -253,11 +363,12 @@ nav a:hover {
     font-size: 27px;
     margin: -103px 0px 11px 19px;
   }
-  nav ul {
-    padding: 0;
+  nav {
+    top: 186px;
   }
-  nav li {
-    display: block;
+
+  .menu-toggle {
+    top: 140px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -272,6 +383,12 @@ nav a:hover {
   #cindyFromIndyPic {
     height: 70px;
     margin: -54px 156px 13px;
+  }
+  nav {
+    top: 197px;
+  }
+  .menu-toggle {
+    top: 160px;
   }
 }
 /* ==========================================================================
