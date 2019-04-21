@@ -116,7 +116,7 @@ body {
 } */
 
 .container {
-  background: rgba(7, 21, 145, 0.5);
+  background: rgba(0, 51, 153, 0.7);
   border-radius: 20px;
   margin: 0px 3px 3px 3px;
   border: dashed 3px rgb(0, 51, 153);
@@ -157,15 +157,15 @@ body {
 
 #cindyFromIndyPic {
   height: 100px;
-  margin: -25px 0px 0px 14px;
+  margin: -34px 0px 15px 5px;
   border-radius: 50%;
-  border: dashed 5px rgb(0, 51, 153);
+  border: dashed 4px navajowhite;
 }
 
 nav {
   position: absolute;
   text-align: center;
-  top: 38%;
+  top: 23%;
   right: 3px;
   background-color: rgba(0, 51, 153, 0.7);
   /* border-radius: 20px;
@@ -240,6 +240,15 @@ nav a:hover nav li {
   z-index: 1;
 }
 
+.menu-text{
+  font-family: Indie Flower;
+  color: navajowhite;
+  position: absolute;
+  top: -15px;
+  right: 53px;
+  font-size: 20px;
+}
+
 .hamburger,
 .hamburger::before,
 .hamburger::after {
@@ -288,9 +297,12 @@ nav a:hover nav li {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  max-width: 1000px;
   position: relative;
   margin: auto;
+}
+
+.bio{
+  
 }
 
 @media only screen and (min-width: 560px) {
@@ -305,9 +317,7 @@ nav a:hover nav li {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* align-content: center; */
     width: 100%;
-    /* text-align: center; */
     position: relative;
     height: 70px;
     border-radius: 20px;
@@ -328,7 +338,7 @@ nav a:hover nav li {
 @media only screen and (min-width: 1000px) {
   nav {
     position: absolute;
-    left: 3%;
+    left: 3px;
     top: 243px;
     width: 200px;
     flex-wrap: wrap;
@@ -344,10 +354,17 @@ nav a:hover nav li {
     display: block;
     border: none;
   }
+  .mySlides img {
+    height: 44vw;
+    max-height: 770px;
+  }
 }
 @media only screen and (max-width: 560px) {
   body {
     overflow: hidden;
+  }
+  .mySlides img {
+    max-height: 240px;
   }
 }
 
@@ -357,7 +374,7 @@ nav a:hover nav li {
   }
   #cindyFromIndyPic {
     height: 90px;
-    margin: -62px 39px 1px 11px;
+    margin: -92px 39px 0px 5px;
   }
   #cindyFromIndy h1 {
     font-size: 27px;
@@ -381,8 +398,8 @@ nav a:hover nav li {
     margin: -107px 181px 53px;
   }
   #cindyFromIndyPic {
-    height: 70px;
-    margin: -54px 156px 13px;
+    height: 89px;
+    margin: -68px 145px 13px;
   }
   nav {
     top: 197px;
