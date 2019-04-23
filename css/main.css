@@ -223,7 +223,8 @@ nav a:hover {
   /* line-height: 1.3em; */
   border: 2px dashed rgb(0, 51, 153);
   border-radius: 10px;
-  box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  -webkit-box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+          box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
 }
 
 nav a:hover nav li {
@@ -258,24 +259,29 @@ nav a:hover nav li {
   height: 3px;
   width: 1.75em;
   border-radius: 3px;
+  -webkit-transition: all ease-in-out 500ms;
   transition: all ease-in-out 500ms;
 }
 .hamburger::before {
-  transform: translateY(-6px);
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
 }
 .hamburger::after {
-  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 .open .hamburger {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .open .hamburger::before {
   opacity: 0;
 }
 
 .open .hamburger::after {
-  transform: translateY(-3px) rotate(-90deg);
+  -webkit-transform: translateY(-3px) rotate(-90deg);
+          transform: translateY(-3px) rotate(-90deg);
 }
 
 .mySlides {
@@ -302,9 +308,25 @@ nav a:hover nav li {
 }
 
 .bio{
-  
+  background-color: rgba(0, 51, 153, 0.9);
+  border-radius: 25px;
 }
-
+.bio>p {
+  color: navajowhite;
+  font-family: Arial, Helvetica, sans-serif;
+  border: dashed 3px navajowhite;
+  border-radius: 25px;
+  padding: 10px;
+} 
+.tid-bits {
+  color: navajowhite;
+  font-family: Arial, Helvetica, sans-serif;
+  border: dashed 3px navajowhite;
+  border-radius: 25px;
+}
+.tid-bits > p {
+padding: 10px;
+}
 @media only screen and (min-width: 560px) {
   .menu-toggle {
     display: none;
@@ -314,9 +336,15 @@ nav a:hover nav li {
     border: none;
   }
   nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     position: relative;
     height: 70px;
@@ -341,7 +369,8 @@ nav a:hover nav li {
     left: 3px;
     top: 243px;
     width: 200px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     height: auto;
   }
   nav a {
@@ -361,10 +390,13 @@ nav a:hover nav li {
 }
 @media only screen and (max-width: 560px) {
   body {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .mySlides img {
     max-height: 240px;
+  }
+  nav{
+    top: 244px;
   }
 }
 
