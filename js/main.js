@@ -42,3 +42,20 @@ $(".menu-toggle").click(function() {
   $(".site-nav").toggleClass("site-nav--open", 500);
   $(this).toggleClass("open");
 });
+
+$(".site-nav ul li a").click(function(e) {
+  e.preventDefault();
+  if (
+    !Object.values(document.querySelector(".displayed").classList).includes(
+      e.target.parentNode.id
+    )
+  ) {
+    $(".displayed")
+      .slideUp(1000, function() {
+        $("." + e.target.parentNode.id)
+          .slideDown(2000)
+          .addClass("displayed");
+      })
+      .removeClass("displayed");
+  }
+});

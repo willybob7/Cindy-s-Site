@@ -194,6 +194,7 @@ nav li {
   position: relative;
   text-align: center;
   border-bottom: dashed navajowhite 1px;
+  cursor: pointer;
 }
 
 nav li:last-child {
@@ -223,8 +224,9 @@ nav a:hover {
   /* line-height: 1.3em; */
   border: 2px dashed rgb(0, 51, 153);
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-          box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  -webkit-box-shadow: 0 0 0 4px navajowhite,
+    2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
 }
 
 nav a:hover nav li {
@@ -241,7 +243,7 @@ nav a:hover nav li {
   z-index: 1;
 }
 
-.menu-text{
+.menu-text {
   font-family: Indie Flower;
   color: navajowhite;
   position: absolute;
@@ -264,16 +266,16 @@ nav a:hover nav li {
 }
 .hamburger::before {
   -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 .hamburger::after {
   -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  transform: translateY(3px);
 }
 
 .open .hamburger {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .open .hamburger::before {
   opacity: 0;
@@ -281,7 +283,7 @@ nav a:hover nav li {
 
 .open .hamburger::after {
   -webkit-transform: translateY(-3px) rotate(-90deg);
-          transform: translateY(-3px) rotate(-90deg);
+  transform: translateY(-3px) rotate(-90deg);
 }
 
 .mySlides {
@@ -307,17 +309,22 @@ nav a:hover nav li {
   margin: auto;
 }
 
-.bio{
+.bio {
   background-color: rgba(0, 51, 153, 0.9);
   border-radius: 25px;
+  display: none;
 }
-.bio>p {
+.bio > p {
   color: navajowhite;
   font-family: Arial, Helvetica, sans-serif;
   border: dashed 3px navajowhite;
   border-radius: 25px;
   padding: 10px;
-} 
+  margin: 0 0 16px 0;
+}
+.bio .tid-bits {
+  margin: 0 0 16px 0;
+}
 .tid-bits {
   color: navajowhite;
   font-family: Arial, Helvetica, sans-serif;
@@ -325,7 +332,8 @@ nav a:hover nav li {
   border-radius: 25px;
 }
 .tid-bits > p {
-padding: 10px;
+  padding: 10px;
+  margin: 0 0 0 0;
 }
 @media only screen and (min-width: 560px) {
   .menu-toggle {
@@ -340,11 +348,11 @@ padding: 10px;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 100%;
     position: relative;
     height: 70px;
@@ -370,7 +378,7 @@ padding: 10px;
     top: 243px;
     width: 200px;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     height: auto;
   }
   nav a {
@@ -387,6 +395,9 @@ padding: 10px;
     height: 44vw;
     max-height: 770px;
   }
+  .bio {
+    margin: 0 0 0 210px;
+  }
 }
 @media only screen and (max-width: 560px) {
   body {
@@ -395,7 +406,7 @@ padding: 10px;
   .mySlides img {
     max-height: 240px;
   }
-  nav{
+  nav {
     top: 244px;
   }
 }
