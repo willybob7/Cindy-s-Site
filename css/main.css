@@ -302,7 +302,8 @@ nav a:hover nav li {
   margin: auto;
 }
 
-.bio {
+.bio,
+.pricing {
   background-color: rgba(0, 51, 153, 0.9);
   border-radius: 25px;
   display: none;
@@ -315,6 +316,28 @@ nav a:hover nav li {
   padding: 10px;
   margin: 0 0 16px 0;
 }
+.picDiv {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.bioPic {
+  max-height: 30vw;
+  margin: 2%;
+  padding: 3px;
+  background: navajowhite;
+  color: rgb(0, 51, 153);
+  border: 2px dashed rgb(0, 51, 153);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 0 4px navajowhite,
+    2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+}
+
+.BB {
+  max-height: 16vw;
+}
+
 .bio .tid-bits {
   margin: 0 0 16px 0;
 }
@@ -327,6 +350,15 @@ nav a:hover nav li {
 .tid-bits > p {
   padding: 10px;
   margin: 0 0 0 0;
+}
+.pricing {
+  justify-content: center;
+  color: navajowhite;
+  text-align: center;
+}
+.pricingTable {
+  margin: auto;
+  align-self: center;
 }
 @media only screen and (min-width: 560px) {
   .menu-toggle {
@@ -389,6 +421,9 @@ nav a:hover nav li {
     max-height: 770px;
   }
   .bio {
+    margin: 0 0 0 210px;
+  }
+  .pricing {
     margin: 0 0 0 210px;
   }
 }
