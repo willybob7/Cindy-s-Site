@@ -145,14 +145,20 @@ textarea {
 
 #cindyFromIndy h1 {
   font-size: 38px;
-  margin: -74px 0px 17px 9px;
+  margin: -74px 0px 17px 20px;
 }
 
 #cindyFromIndyPic {
   height: 100px;
-  margin: -34px 0px 15px 5px;
+  margin: -23px 0px 15px 34px;
+  padding: 3px;
+  background: navajowhite;
+  color: rgb(0, 51, 153);
+  border: 2px dashed rgb(0, 51, 153);
   border-radius: 50%;
-  border: dashed 4px navajowhite;
+  -webkit-box-shadow: 0 0 0 4px navajowhite,
+    2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
 }
 
 nav {
@@ -172,7 +178,7 @@ nav {
 .site-nav--open {
   height: auto;
   border-radius: 20px;
-  border: dashed 3px rgb(0, 51, 153);
+  border: dashed 3px navajowhite;
 }
 
 nav ul {
@@ -314,7 +320,7 @@ nav a:hover nav li {
   border: dashed 3px navajowhite;
   border-radius: 25px;
   padding: 10px;
-  margin: 0 0 16px 0;
+  margin: 0 5px 16px 5px;
 }
 .picDiv {
   display: flex;
@@ -339,7 +345,7 @@ nav a:hover nav li {
 }
 
 .bio .tid-bits {
-  margin: 0 0 16px 0;
+  margin: 0 5px 16px 5px;
 }
 .tid-bits {
   color: navajowhite;
@@ -352,13 +358,33 @@ nav a:hover nav li {
   margin: 0 0 0 0;
 }
 .pricing {
-  justify-content: center;
   color: navajowhite;
   text-align: center;
+  margin: 10px 3px;
+  padding: 10px;
 }
+
 .pricingTable {
-  margin: auto;
-  align-self: center;
+  margin: 10px auto;
+}
+.pricingTable, th, td {
+  border: 1px dashed navajowhite;
+  border-collapse: collapse;
+  padding: 11px;
+    font-size: 20px;
+}
+.downloadButton{
+  text-decoration: none;
+  color: navajowhite;
+   margin: 2%;
+  padding: 3px;
+  background: navajowhite;
+  color: rgb(0, 51, 153);
+  border: 2px dashed rgb(0, 51, 153);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 0 4px navajowhite,
+    2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  box-shadow: 0 0 0 4px navajowhite, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
 }
 @media only screen and (min-width: 560px) {
   .menu-toggle {
@@ -421,10 +447,13 @@ nav a:hover nav li {
     max-height: 770px;
   }
   .bio {
-    margin: 0 0 0 210px;
+    margin: 0 3px 0 210px;
+  }
+  .bio > p{
+    margin: 0 10% 16px 10%;
   }
   .pricing {
-    margin: 0 0 0 210px;
+    margin: 0 3px 0 210px;
   }
 }
 @media only screen and (max-width: 560px) {
@@ -436,6 +465,9 @@ nav a:hover nav li {
   }
   nav {
     top: 244px;
+  }
+  .pricingTable, th, td {
+  font-size: 16px;
   }
 }
 
@@ -458,6 +490,9 @@ nav a:hover nav li {
   .menu-toggle {
     top: 140px;
   }
+  .pricingTable, th, td {
+  padding: 5px;
+}
 }
 @media only screen and (max-width: 400px) {
   .logo {
