@@ -7,3 +7,5 @@ add authentication and authorization to the admin page
 add a delete pictures page that shows thumbnails of all the pictures so that she can pick which ones she wants to delete
 add file conversion from heic to jpg for uploading, and possibly compression to save on storage space
 add scroll animation and a modal for the pictures page
+make the editable pdf for download so users can email it to Cindy
+make a form that a person can fill out and submit it and then Cindy gets an email with the info
